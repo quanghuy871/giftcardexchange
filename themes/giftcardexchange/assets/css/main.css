@@ -2255,7 +2255,7 @@ iframe {
 }
 @media (min-width: 768px) {
   .section-compare h2 {
-    min-width: 900px;
+    max-width: 900px;
     font-size: 2.625rem;
     margin-bottom: 70px;
   }
