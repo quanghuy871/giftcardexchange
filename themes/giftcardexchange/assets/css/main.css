@@ -2591,8 +2591,8 @@ iframe {
   .section-form {
     background-position: top;
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 }
 .section-form:before {

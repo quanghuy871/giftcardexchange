@@ -780,7 +780,7 @@
   @include bg-image-pos(right, cover);
 
   @include media-breakpoint-up(xxl) {
-    @include bg-image-pos(top, contain);
+    @include bg-image-pos(top, cover);
   }
 
   &:before {
