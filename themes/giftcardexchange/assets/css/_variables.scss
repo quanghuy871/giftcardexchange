@@ -1,0 +1,68 @@
+/*************************************************/
+/* SCREEN BREAKPOINTS */
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1336px,
+        xxxl: 1700px,
+);
+
+/*************************************************/
+/* FONTS */
+$font-sans-serif: 'Inter', sans-serif;
+$font-gruen: 'Inter', sans-serif;
+$font-vinyl: 'Inter', sans-serif;
+$font-size-root: 16px;
+
+/*************************************************/
+/* COLORS */
+$white: #fff;
+$purple: #6031D3;
+$dark-purple: #5a189a;
+$orange: #F95D00;
+$smoke-black: #333333;
+$green: #C5F0EC;
+$gray: #949494;
+$light-gray: #F8F8F9;
+$dark-green: #3B7D25;
+
+$colors: (
+        'black': black,
+        'white': $white,
+        'purple': $purple,
+        'dark-purple': $dark-purple,
+        'orange': $orange,
+        'smoke-black': $smoke-black,
+        'green': $green,
+        'dark-green': $dark-green,
+        'gray': $gray,
+        'light-gray': $light-gray,
+);
+
+/*************************************************/
+/* IMAGES */
+$images: '../images';
+$fonts: '../fonts';
+
+/*************************************************/
+/* SPACINGS */
+$gutter: 60px;
+$gutter-md: 30px;
+$gutter-sm: 15px;
+
+$input-height: 55px;
+$header-height-mobile: 50px;
+
+$screen-admin-min: 783px;
+$screen-inner-content: 1000px;
+
+$g-admin-bar-small: 32px;
+$g-admin-bar-large: 46px;
+
+$letter-spacing: 0.4em;
+$letter-spacing-md: 0.2em;
+$letter-spacing-sm: 0.1em;
+$letter-spacing-xs: 0.05em;
