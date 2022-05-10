@@ -229,7 +229,7 @@ get_header(); ?>
             </div>
           </div>
 
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-next swiper-button-next-compare"></div>
         </div>
       </div>
     </div>
@@ -428,7 +428,7 @@ get_header(); ?>
             </div>
           </div>
 
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-next swiper-button-next-deals"></div>
         </div>
       </div>
 
@@ -552,16 +552,16 @@ get_header(); ?>
     let swiper3 = new Swiper('.mySwiper-3', {
       loop: true,
       navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev-compare',
+        nextEl: '.swiper-button-next-compare',
       },
     });
 
     let swiper4 = new Swiper('.mySwiper-4', {
       loop: true,
       navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev-deals',
+        nextEl: '.swiper-button-next-deals',
       },
     });
   </script>
