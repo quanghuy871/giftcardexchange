@@ -2380,7 +2380,7 @@ iframe {
   height: 16px;
 }
 .section-compare__mobile .compare--right .swiper-button-next {
-  top: 20%;
+  top: 80px;
   right: 20px;
   left: auto;
 }
@@ -2469,9 +2469,6 @@ iframe {
 }
 .section-deals .source--field p a {
   text-decoration: underline;
-}
-.section-deals .swiper-button-next {
-  top: 18% !important;
 }
 .section-deals__link {
   margin-top: 40px;
@@ -2656,11 +2653,17 @@ iframe {
 }
 .section-form__wrapper .form--addons {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 25px;
+  justify-content: space-between;
+}
+@media (min-width: 576px) {
+  .section-form__wrapper .form--addons {
+    justify-content: unset;
+  }
 }
 @media (min-width: 768px) {
   .section-form__wrapper .form--addons {
+    justify-content: space-between;
     margin-bottom: 35px;
   }
 }

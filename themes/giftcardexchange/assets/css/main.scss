@@ -551,7 +551,7 @@
 
     .compare--right {
       .swiper-button-next {
-        top: 20%;
+        top: 80px;
         right: 20px;
         left: auto;
 
@@ -664,10 +664,6 @@
         text-decoration: underline;
       }
     }
-  }
-
-  .swiper-button-next {
-    top: 18% !important;
   }
 
   &__link {
@@ -843,10 +839,15 @@
 
     .form--addons {
       display: flex;
-      justify-content: space-between;
       margin-bottom: 25px;
+      justify-content: space-between;
+
+      @include media-breakpoint-up(sm) {
+        justify-content: unset;
+      }
 
       @include media-breakpoint-up(md) {
+        justify-content: space-between;
         margin-bottom: 35px;
       }
 
