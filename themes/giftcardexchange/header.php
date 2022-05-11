@@ -31,19 +31,21 @@
 <body <?php body_class(); ?>>
 
 <div id="page">
-  <header class="header">
-    <div class="header-wrapper">
-      <div class="header-logo">
-        <a href="#">
-          <img class="img-fluid logo" src="<?= get_assets_path('images/logo.svg')?>" alt="Gift Card Exchange">
-        </a>
-      </div>
+  <? if ( ! ( is_page_template( 'templates/page-offer-thank.php' ) || is_page_template( 'templates/page-demo-thank.php' ) ) ) : ?>
+    <header class="header">
+      <div class="header-wrapper">
+        <div class="header-logo">
+          <a href="<?= esc_url( site_url( '/' ) ) ?>">
+            <img class="img-fluid logo" src="<?= get_assets_path( 'images/logo.svg' ) ?>" alt="Gift Card Exchange">
+          </a>
+        </div>
 
-      <div class="header-link">
-        <a class="btn btn-white" href="#">BOOK DEMO</a>
+        <div class="header-link">
+          <a target="form" class="btn btn-white btn-demo-top" href="#">BOOK DEMO</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+  <? endif; ?>
 
   <main id="content">
 

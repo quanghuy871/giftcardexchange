@@ -1858,6 +1858,199 @@ iframe {
   background-color: #F95D00;
   color: #fff;
 }
+.btn.btn-border {
+  color: #333333;
+  background-color: transparent;
+  font-weight: 600;
+  border: 1px solid #949494;
+  padding: 24px;
+  min-width: 150px;
+  font-size: 1.125rem;
+  line-height: 0;
+}
+@media (min-width: 768px) {
+  .btn.btn-border {
+    font-size: 1.375rem;
+    min-width: 225px;
+  }
+}
+@media (min-width: 992px) {
+  .btn.btn-border {
+    line-height: 15px;
+  }
+}
+.btn.btn-border:hover {
+  border: 1px solid #F95D00;
+  background-color: #F95D00;
+  color: #fff;
+}
+.btn.active {
+  background-color: #6031D3;
+  color: #fff;
+}
+
+.section-header {
+  text-align: center;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+.section-header__wrapper {
+  padding: 20px;
+}
+@media (max-width: 991px) {
+  .section-header__wrapper {
+    padding: 23px;
+  }
+}
+.section-header__wrapper img {
+  height: 45px;
+}
+
+.section-amazing {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .section-amazing {
+    padding-bottom: 100px;
+    padding-top: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .section-amazing {
+    text-align: left;
+  }
+}
+.section-amazing__content h2 {
+  color: #333333;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 25px;
+  line-height: 40px;
+}
+@media (min-width: 992px) {
+  .section-amazing__content h2 {
+    line-height: 43px;
+    margin-bottom: 24px;
+    font-size: 2.25rem;
+  }
+}
+.section-amazing__content h3 {
+  color: #333333;
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 34px;
+  margin-bottom: 22px;
+}
+@media (min-width: 992px) {
+  .section-amazing__content h3 {
+    margin-bottom: 18px;
+    line-height: 36px;
+    font-size: 1.5rem;
+  }
+}
+.section-amazing__content p {
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #666666;
+  margin-bottom: 25px;
+  font-size: 1.125rem;
+  line-height: 28px;
+}
+@media (min-width: 992px) {
+  .section-amazing__content p {
+    line-height: 34px;
+    font-size: 1.25rem;
+  }
+}
+.section-amazing__content span {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  .section-amazing__content span {
+    font-size: 1.25rem;
+  }
+}
+.section-amazing__links {
+  margin-top: 35px;
+}
+.section-amazing__links a {
+  min-width: 240px !important;
+  margin-bottom: 20px;
+  font-size: 1rem !important;
+}
+@media (max-width: 767px) {
+  .section-amazing__links a {
+    min-width: 215px !important;
+  }
+}
+@media (min-width: 992px) {
+  .section-amazing__links a {
+    font-size: 1.25rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .section-amazing__links a.btn-purple {
+    padding: 25px !important;
+  }
+}
+.section-amazing__img {
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .section-amazing__img {
+    margin-bottom: 0;
+    padding-left: 40px;
+  }
+}
+.section-amazing__img img {
+  border-radius: 16px;
+}
+
+.section-head p {
+  font-size: 1.375rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #333333;
+  line-height: 40px;
+}
+@media (min-width: 992px) {
+  .section-head p {
+    font-size: 1.5rem;
+  }
+}
+.section-head span {
+  font-weight: 300;
+  color: #666666;
+}
+@media (min-width: 992px) {
+  .section-head span {
+    font-size: 1.25rem;
+  }
+}
+
+.section-term {
+  text-align: center;
+}
+.section-term__wrapper {
+  border-top: 1px solid #DDDDDD;
+  padding: 20px 0 30px;
+}
+.section-term ul {
+  padding: 0;
+  margin: 0;
+}
+.section-term li {
+  display: inline-block;
+  color: #949494;
+}
+.section-term li a {
+  padding: 0 5px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #666666;
+}
 
 .header {
   z-index: 999;
@@ -2019,8 +2212,9 @@ iframe {
 }
 @media (min-width: 768px) {
   .section-cards__banner {
-    height: 0;
-    padding-bottom: 50%;
+    height: 700px;
+    background-repeat: repeat-x;
+    background-size: contain;
   }
 }
 .section-cards__banner .img__wrapper {
@@ -2733,11 +2927,15 @@ iframe {
   border-radius: 6px;
   color: #fff;
   padding: 8px !important;
+  transition: all 0.25s ease-in-out 0s;
 }
 @media (min-width: 768px) {
   .section-form__wrapper .gform_button {
     padding: 23px !important;
   }
+}
+.section-form__wrapper .gform_button:hover {
+  background-color: #5a189a;
 }
 .section-form__wrapper .gform_wrapper.gravity-theme .gform_footer, .section-form__wrapper .gform_wrapper.gravity-theme .gform_page_footer {
   margin-top: 0;
@@ -2752,6 +2950,11 @@ iframe {
 @media (min-width: 768px) {
   .section-form__wrapper span {
     font-size: 1.25rem;
+  }
+}
+@media (min-width: 992px) {
+  .section-form__wrapper a {
+    min-width: 205px !important;
   }
 }
 

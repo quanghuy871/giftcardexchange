@@ -8,33 +8,23 @@ get_header(); ?>
 
   <!--SECTION BANNER-->
   <div class="section-banner">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <? if ( have_rows( 'banners' ) ) : ?>
-          <? while ( have_rows( 'banners' ) ) : the_row() ?>
-            <div class="swiper-slide section-banner__wrapper" style="background-image: url('<?= get_sub_field( 'background' )['url'] ?>')">
-              <div class="section-banner__opening" style="background-image: url('<?= get_sub_field( 'background' )['url'] ?>')">
-                <h2><?= get_sub_field( 'top_caption' ) ?></h2>
-              </div>
+    <div class="section-banner__wrapper" style="background-image: url('<?= esc_url( get_the_post_thumbnail_url() ) ?>')">
+      <div class="section-banner__opening" style="background-image: url('<?= esc_url( get_the_post_thumbnail_url() ) ?>')">
+        <h2><?= get_field( 'top_caption' ) ?></h2>
+      </div>
 
-              <div class="section-banner__container container">
-                <p><?= get_sub_field( 'middle_caption' ) ?></p>
+      <div class="section-banner__container container">
+        <p><?= get_field( 'middle_caption' ) ?></p>
 
-                <h1><?= get_sub_field( 'bottom_caption' ) ?></h1>
+        <h1><?= get_field( 'bottom_caption' ) ?></h1>
 
-                <? if ( ! empty( get_sub_field( 'url' ) ) ) : ?>
-                  <a class="btn btn-purple" href="<?= esc_url( get_sub_field( 'url' ) ) ?>"><?= get_sub_field( 'link_text' ) ?></a>
-                <? endif; ?>
+        <a target="form" class="btn btn-purple btn-redeem" href="#>">REDEEM</a>
 
-                <span>(Limited Time Offer)</span>
+        <span>(Limited Time Offer)</span>
 
-                <a href="#">
-                  <img class="img-fluid" src="<?= get_assets_path( 'images/icons/goto-arrow.svg' ) ?>" alt="">
-                </a>
-              </div>
-            </div>
-          <? endwhile; ?>
-        <? endif; ?>
+        <a href="#">
+          <img class="img-fluid" src="<?= get_assets_path( 'images/icons/goto-arrow.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
+        </a>
       </div>
     </div>
   </div>
@@ -45,7 +35,7 @@ get_header(); ?>
 
     <div class="section-cards__banner" style="background-image: url('<?= get_assets_path( 'images/cards.svg' ) ?>')">
       <div class="img__wrapper">
-        <img class="img-fluid" src="<?= get_assets_path( 'images/exchange-card.svg' ) ?>" alt="">
+        <img class="img-fluid" src="<?= get_assets_path( 'images/exchange-card.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
       </div>
     </div>
 
@@ -53,7 +43,7 @@ get_header(); ?>
       <div class="container">
         <h3>Buy an Exchange Card and you can swap it for hundreds of brands!</h3>
 
-        <a class="btn btn-purple" href="#">REDEEM OFFER</a>
+        <a target="form" class="btn btn-purple btn-redeem" href="#">REDEEM OFFER</a>
 
         <p>SAVE up to $50 per order</p>
       </div>
@@ -110,9 +100,9 @@ get_header(); ?>
 
                   <div class="wrapper-tr__field">
                     <? if ( get_sub_field( 'main_choice' ) ) : ?>
-                      <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/yes.svg' ) ?>" alt="">
+                      <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/yes.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
                     <? else : ?>
-                      <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/no.svg' ) ?>" alt="">
+                      <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/no.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
                     <? endif; ?>
                   </div>
                 </div>
@@ -213,9 +203,9 @@ get_header(); ?>
                           <div class="card-field__wrapper d-flex">
                             <div class="card-field-item">
                               <? if ( get_sub_field( 'choice' ) ) : ?>
-                                <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/yes.svg' ) ?>" alt="">
+                                <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/yes.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
                               <? else: ?>
-                                <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/no.svg' ) ?>" alt="">
+                                <img class="img-fluid fa" src="<?= get_assets_path( 'images/icons/no.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
                               <? endif; ?>
                             </div>
                           </div>
@@ -434,7 +424,7 @@ get_header(); ?>
 
       <!--LINKS-->
       <div class="section-deals__link text-center">
-        <a class="btn btn-purple" href="#">REDEEM OFFER</a>
+        <a target="form" class="btn btn-purple btn-redeem" href="#">REDEEM OFFER</a>
       </div>
     </div>
   </div>
@@ -479,7 +469,7 @@ get_header(); ?>
             <ul class="list-unstyled">
               <? while ( have_rows( 'experiences' ) ) : the_row() ?>
                 <li>
-                  <img class="img-fluid" src="<?= the_assets_path( 'images/icons/success.svg' ) ?>" alt="">
+                  <img class="img-fluid" src="<?= the_assets_path( 'images/icons/success.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
                   <span><?= get_sub_field( 'experience' ) ?></span>
                 </li>
               <? endwhile; ?>
@@ -489,7 +479,7 @@ get_header(); ?>
 
         <div class="col-12 col-md-6 col-lg-5">
           <div class="section-experience__animation">
-            <img class="img-fluid" src="<?= the_assets_path( 'images/iphone.svg' ) ?>" alt="">
+            <img class="img-fluid" src="<?= the_assets_path( 'images/iphone.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
           </div>
         </div>
       </div>
@@ -497,20 +487,26 @@ get_header(); ?>
   </div>
 
   <!--SECTION FORM-->
-  <div class="section section-form" style="background-image: url('<?= get_assets_path( 'images/istock.png' ) ?>')">
+  <div class="section section-form" style="background-image: url('<?= get_field( 'background' )['url'] ?>')">
     <div class="container">
       <h2>DON’T MISS OUT</h2>
 
       <p>GET 10% off YOUR FIRST GIFT CARD PURCHASE
         UP TO $500, BEST ONLINE DEAL GUARANTEED!</p>
 
-      <div class="section-form__wrapper">
+      <div id="form" class="section-form__wrapper">
         <div class="form--addons">
-          <a class="btn btn-purple" href="#">GET OFFER</a>
-          <a class="btn btn-transparent" href="#">BOOK DEMO</a>
+          <a class="btn btn-transparent btn-offer" href="#">GET OFFER</a>
+          <a class="btn btn-transparent btn-demo" href="#">BOOK DEMO</a>
         </div>
 
-        <? the_content(); ?>
+        <div class="form--offer">
+          <?= do_shortcode( '[gravityform id="1" title="true" description="true"]' ); ?>
+        </div>
+
+        <div class="form--demo">
+          <?= do_shortcode( '[gravityform id="2" title="true" description="true"]' ); ?>
+        </div>
 
         <span>SAVE $50 on $500 worth of Gift Cards</span>
       </div>
@@ -518,53 +514,6 @@ get_header(); ?>
   </div>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <script>
-    let swiper = new Swiper('.mySwiper', {});
-
-    let swiper2 = new Swiper('.mySwiper-2', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 8,
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
-
-    let swiper3 = new Swiper('.mySwiper-3', {
-      loop: true,
-      navigation: {
-        prevEl: '.swiper-button-prev-compare',
-        nextEl: '.swiper-button-next-compare',
-      },
-    });
-
-    let swiper4 = new Swiper('.mySwiper-4', {
-      loop: true,
-      navigation: {
-        prevEl: '.swiper-button-prev-deals',
-        nextEl: '.swiper-button-next-deals',
-      },
-    });
-  </script>
 
 <?php endwhile; ?>
 

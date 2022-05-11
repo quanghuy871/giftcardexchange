@@ -102,4 +102,93 @@ jQuery(document).ready(function($) {
   $('.select2').select2({
     minimumResultsForSearch: 20,
   });
+
+  // Form and Button
+  $('.form--demo').hide();
+  $('.btn-offer').addClass('active');
+
+  $(document).on('click', '.btn-redeem', function(e) {
+    e.preventDefault();
+    $('.btn-offer').addClass('active');
+    $('.btn-demo').removeClass('active');
+    $('.section-form__wrapper').find('.form--offer').show();
+    $('.section-form__wrapper').find('.form--demo').hide();
+    const _this = $(this);
+    $('html, body').animate({scrollTop: eval($('#' + _this.attr('target')).offset().top - 70)}, 100);
+  });
+
+  $(document).on('click', '.btn-demo-top', function(e) {
+    e.preventDefault();
+    $('.btn-offer').removeClass('active');
+    $('.btn-demo').addClass('active');
+    $('.section-form__wrapper').find('.form--offer').hide();
+    $('.section-form__wrapper').find('.form--demo').show();
+    const _this = $(this);
+    $('html, body').animate({scrollTop: eval($('#' + _this.attr('target')).offset().top - 70)}, 100);
+  });
+
+  $(document).on('click', '.btn-offer', function(e) {
+    e.preventDefault();
+    $('.btn-demo').removeClass('active');
+
+    const _this = $(this);
+    _this.addClass('active');
+    _this.closest('.section-form__wrapper').find('.form--offer').show();
+    _this.closest('.section-form__wrapper').find('.form--demo').hide();
+  });
+
+  $(document).on('click', '.btn-demo', function(e) {
+    e.preventDefault();
+    $('.btn-offer').removeClass('active');
+
+    const _this = $(this);
+    _this.addClass('active');
+    _this.closest('.section-form__wrapper').find('.form--offer').hide();
+    _this.closest('.section-form__wrapper').find('.form--demo').show();
+  });
+
+
+  // Swiper
+  let swiper2 = new Swiper('.mySwiper-2', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 8,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  let swiper3 = new Swiper('.mySwiper-3', {
+    loop: true,
+    navigation: {
+      prevEl: '.swiper-button-prev-compare',
+      nextEl: '.swiper-button-next-compare',
+    },
+  });
+
+  let swiper4 = new Swiper('.mySwiper-4', {
+    loop: true,
+    navigation: {
+      prevEl: '.swiper-button-prev-deals',
+      nextEl: '.swiper-button-next-deals',
+    },
+  });
 });
