@@ -31,21 +31,29 @@ get_header(); ?>
 
   <!--SECTION CARDS-->
   <div class="section section-cards">
-    <h2>REDEEM YOUR GIFT CARDS AT <span>100+ DIFFERENT</span> STORES</h2>
+    <? if ( ! empty( get_field( 'main_heading' ) ) ) : ?>
+      <h2><?= get_field( 'main_heading' ) ?></h2>
+    <? endif; ?>
 
-    <div class="section-cards__banner" style="background-image: url('<?= get_assets_path( 'images/cards.svg' ) ?>')">
+    <div class="section-cards__banner" style="background-image: url('<?= esc_url( get_field( 'background_card' )['url'] ) ?>')">
       <div class="img__wrapper">
-        <img class="img-fluid" src="<?= get_assets_path( 'images/exchange-card.svg' ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
+        <? if ( ! empty( get_field( 'main_card' ) ) ) : ?>
+          <img class="img-fluid" src="<?= esc_url( get_field( 'main_card' )['url'] ) ?>" alt="<?= esc_attr( get_bloginfo( 'name' ) ) ?>">
+        <? endif; ?>
       </div>
     </div>
 
     <div class="section-cards__content">
       <div class="container">
-        <h3>Buy an Exchange Card and you can swap it for hundreds of brands!</h3>
+        <? if ( ! empty( get_field( 'sub_heading' ) ) ) : ?>
+          <h3><?= get_field( 'sub_heading' ) ?></h3>
+        <? endif; ?>
 
         <a target="form" class="btn btn-purple btn-redeem" href="#">REDEEM OFFER</a>
 
-        <p>SAVE up to $50 per order</p>
+        <? if ( ! empty( get_field( 'description_card' ) ) ) : ?>
+          <p><?= get_field( 'description_card' ) ?></p>
+        <? endif; ?>
       </div>
     </div>
   </div>

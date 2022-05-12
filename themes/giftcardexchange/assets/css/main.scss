@@ -333,8 +333,8 @@
     position: relative;
     height: 300px;
 
-    @include media-breakpoint-up(md) {
-      height: 700px;
+    @include media-breakpoint-up(xl) {
+      height: 560px;
       background-repeat: repeat-x;
       background-size: contain;
     }
@@ -342,12 +342,20 @@
     .img__wrapper {
       position: absolute;
       right: 50%;
-      bottom: 0;
+      bottom: 20%;
       transform: translate(50%, 50%);
       width: 310px;
 
       @include media-breakpoint-up(md) {
-        width: inherit;
+        width: 500px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        bottom: 165px;
+      }
+
+      @include media-breakpoint-up(xxxl) {
+        bottom: 20%;
       }
     }
   }
@@ -356,7 +364,11 @@
     padding: 55px 0 0;
 
     @include media-breakpoint-up(lg) {
-      padding: 100px 0 0;
+      padding: 0;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      padding: 60px 0 0;
     }
 
     h3 {
@@ -396,7 +408,7 @@
   h2 {
     color: $smoke-black;
     max-width: 315px;
-    margin: 0 auto 10px;
+    margin: 0 auto 20px;
     font-size: rem(24px);
     font-weight: 700;
     line-height: 34px;
@@ -405,11 +417,10 @@
       font-size: rem(42px);
       max-width: 600px;
       line-height: 54px;
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 40px;
       max-width: 850px;
     }
 
@@ -421,6 +432,10 @@
 
 .section-icons {
   text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 0 !important;
+  }
 
   .container {
     @include media-breakpoint-up(xl) {
@@ -441,8 +456,8 @@
 
     img {
       border-radius: 50%;
-      height: 95px;
-      width: 95px;
+      height: auto;
+      width: 190px;
       margin-bottom: 24px;
 
       @include media-breakpoint-up(md) {
@@ -560,7 +575,6 @@
 }
 
 .section-compare {
-  border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
 
   .container {

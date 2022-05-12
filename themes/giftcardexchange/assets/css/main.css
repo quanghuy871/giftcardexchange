@@ -2210,9 +2210,9 @@ iframe {
   position: relative;
   height: 300px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .section-cards__banner {
-    height: 700px;
+    height: 560px;
     background-repeat: repeat-x;
     background-size: contain;
   }
@@ -2220,13 +2220,23 @@ iframe {
 .section-cards__banner .img__wrapper {
   position: absolute;
   right: 50%;
-  bottom: 0;
+  bottom: 20%;
   transform: translate(50%, 50%);
   width: 310px;
 }
 @media (min-width: 768px) {
   .section-cards__banner .img__wrapper {
-    width: inherit;
+    width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .section-cards__banner .img__wrapper {
+    bottom: 165px;
+  }
+}
+@media (min-width: 1700px) {
+  .section-cards__banner .img__wrapper {
+    bottom: 20%;
   }
 }
 .section-cards__content {
@@ -2234,7 +2244,12 @@ iframe {
 }
 @media (min-width: 992px) {
   .section-cards__content {
-    padding: 100px 0 0;
+    padding: 0;
+  }
+}
+@media (min-width: 1700px) {
+  .section-cards__content {
+    padding: 60px 0 0;
   }
 }
 .section-cards__content h3 {
@@ -2273,7 +2288,7 @@ iframe {
 .section-cards h2 {
   color: #333333;
   max-width: 315px;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 34px;
@@ -2283,12 +2298,11 @@ iframe {
     font-size: 2.625rem;
     max-width: 600px;
     line-height: 54px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 992px) {
   .section-cards h2 {
-    margin-bottom: 40px;
     max-width: 850px;
   }
 }
@@ -2298,6 +2312,11 @@ iframe {
 
 .section-icons {
   text-align: center;
+}
+@media (min-width: 992px) {
+  .section-icons {
+    padding-bottom: 0 !important;
+  }
 }
 @media (min-width: 1200px) {
   .section-icons .container {
@@ -2317,8 +2336,8 @@ iframe {
 }
 .section-icons__item img {
   border-radius: 50%;
-  height: 95px;
-  width: 95px;
+  height: auto;
+  width: 190px;
   margin-bottom: 24px;
 }
 @media (min-width: 768px) {
@@ -2432,7 +2451,6 @@ iframe {
 }
 
 .section-compare {
-  border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
 }
 @media (max-width: 767px) {
