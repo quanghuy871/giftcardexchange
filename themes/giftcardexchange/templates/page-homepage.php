@@ -499,7 +499,6 @@ get_header(); ?>
     <div class="container">
       <?= get_field( 'heading_content_form' ) ?>
 
-
       <div id="form" class="section-form__wrapper">
         <div class="form--addons">
           <a class="btn btn-transparent btn-offer" href="#">GET OFFER</a>
