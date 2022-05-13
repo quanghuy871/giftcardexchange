@@ -497,10 +497,7 @@ get_header(); ?>
   <!--SECTION FORM-->
   <div class="section section-form" style="background-image: url('<?= get_field( 'background' )['url'] ?>')">
     <div class="container">
-      <h2>DON’T MISS OUT</h2>
-
-      <p>GET 10% off YOUR FIRST GIFT CARD PURCHASE
-        UP TO $500, BEST ONLINE DEAL GUARANTEED!</p>
+      <?= get_field( 'heading_content_form' ) ?>
 
       <div id="form" class="section-form__wrapper">
         <div class="form--addons">
@@ -516,7 +513,7 @@ get_header(); ?>
           <?= do_shortcode( '[gravityform id="2" title="true" description="true"]' ); ?>
         </div>
 
-        <span>SAVE $50 on $500 worth of Gift Cards</span>
+        <span><?= get_field( 'promo_text_form' ) ?></span>
       </div>
     </div>
   </div>
